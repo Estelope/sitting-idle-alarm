@@ -8,7 +8,12 @@ chrome.runtime.onInstalled.addListener(() => {
 // Add an alarm listener to handle the alarm events
 chrome.alarms.onAlarm.addListener(alarm => {
   if (alarm.name === "periodicAlarm") {
-    // Replace this with the code you want to run periodically
-    console.log("Periodic alarm triggered. Running your code here...");
+    chrome.notifications.create({
+      type: "basic",
+      iconUrl: "images/icon48.png",
+      title: "Periodic Alarm",
+      message: "This is your periodic alarm notification.",
+    });
+  
   }
 });
