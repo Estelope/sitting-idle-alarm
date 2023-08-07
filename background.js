@@ -1,7 +1,7 @@
 // Set up an initial alarm when the extension is installed or updated
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create("periodicAlarm", {
-    periodInMinutes: 1 // Run every 15 minutes
+    periodInMinutes: 1 // Run every 1 minute
   });
 });
 
